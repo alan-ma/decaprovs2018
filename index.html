@@ -1,0 +1,100 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="A searchable version of DECA Provincials Results">
+<meta name="author" content="Alan Ma">
+<script src="jquery-3.1.1.min.js"></script>
+<script src="script.js"></script>
+<link rel="stylesheet" href="bootstrap.css">
+<link rel="stylesheet" href="main.css">
+<title>DECA Provs Results 2018</title>
+
+<div class="container">
+	<div class="intro">
+		<h1>DECA Provincials Results 2018</h1>
+		<h4>Rankings don't really matter... competition is a scam :)</h4>
+	</div>
+	
+	<form id="specs">
+		<h2>Specification</h2>
+		<h4>(leave areas blank to include all)</h4>
+		<div class="col col-md-9">
+			<div class="col col-md-3">
+				<label for="series">Series:</label>
+				<br>
+				<input type="text" id="series" placeholder="e.g. BLTDM">
+			</div>
+			<div class="col col-md-3">
+				<label for="id">ID:</label>
+				<br>
+				<input type="text" id="id" placeholder="e.g. 1786">
+			</div>
+			<div class="col col-md-3">
+				<label for="chapter">Chapter:</label>
+				<br>
+				<input type="text" id="chapter" placeholder="e.g. The Woodlands School">
+			</div>
+			<div class="col col-md-3">
+				<label for="judge">Judge:</label>
+				<br>
+				<input type="text" id="judge" placeholder="e.g. A">
+			</div>
+		</div>
+		<div class="col col-md-3">
+			<div class="col col-md-6">
+				<label for="include">Include</label>
+				<select id="include">
+					<option value="all">All</option>
+					<option value="teams">Teams Only</option>
+					<option value="individuals">Individuals Only</option>
+				</select>
+			</div>
+			<div class="col col-md-6">
+				<label for="key">Sort By:</label>
+				<br>
+				<select id="key">
+					<option value="overall">Overall Rank</option>
+					<option value="exam">Exam Score</option>
+					<option value="oral_one">Oral 1 Score</option>
+					<option value="oral_two">Oral 2 Score</option>
+					<option value="penalty">Penalty</option>
+					<option value="judge">Judge</option>
+				</select>
+			</div>
+		</div>
+		
+		<div class="col col-xs-12">
+			<input id="submit" type="submit" value="Search">
+		</div>
+	</form>
+
+	<div id="results_container" class="col col-xs-12">
+		<div class="row" id="headings">
+			<div class="col col-xs-1">Result Number</div>
+			<div class="col col-xs-1">Series Code</div>
+			<div class="col col-xs-1">ID</div>
+			<div class="col col-xs-3">Chapter</div>
+			<div class="col col-xs-1">Judge*</div>
+			<div class="col col-xs-1">Penalty</div>
+			<div class="col col-xs-1">Exam</div>
+			<div class="col col-xs-1">Oral 1</div>
+			<div class="col col-xs-1">Oral 2</div>
+			<div class="col col-xs-1">Overall Score</div>
+		</div>
+		<div id="loading"></div>
+		<div id="intro">
+			Click 'Search' to begin. Try adding search parameters as well!
+			<br>
+			Leave specification areas blank to include all of them. For example, leaving 'Chapter' blank will include all results from all chapters.
+			<br>
+			Queries need to be exact. For example, "Woodlands" will not return any results.
+			<br>
+			Note: 'Teams Only' and 'Individuals Only' serve to filter out individual scores in team events (i.e. they doesn't filter out individual events like PFL).
+			<br>
+			*This is not necessarily the judge they went to (due to schedule rearrangements).
+		</div>
+		<div id="no_result">
+			No results. Try searching with different terms.
+		</div>
+	</div>
+
+</div>

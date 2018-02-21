@@ -1,0 +1,54 @@
+.intro {
+	border-bottom: 3px solid orange;
+}
+#submit {
+	width: 100%;
+	margin: 20px;
+}
+#results_container {
+	min-width: 1080px;
+}
+.data-row {
+	padding: 5px 0;
+}
+#no_result {
+	display: none;
+	margin-top: 10px;
+}
+#intro {
+	margin-top: 10px;
+}
+#headings {
+	font-weight: bold;
+	border-bottom: 2px solid orange;
+}
+.gray {
+	background-color: #DDD;
+}
+#submit {
+	border: 3px solid #AAA;
+	background-color: transparent;
+	border-radius: 5px;
+}
+#submit:hover {
+	border: 3px solid orange;
+}
+#loading {
+	height: 50px;
+	width: 50px;
+	border: 7px solid transparent;
+	border-top: 7px solid orange;
+	margin: 30px auto;
+	border-radius: 50%;
+	animation: spin 0.7s infinite linear;
+	display: none;
+}
+@keyframes spin {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
+.tilt {
+	transform: rotate(60deg);
+	transform-origin: top right;
+}
+
