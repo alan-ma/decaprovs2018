@@ -112,7 +112,6 @@ function filter(data, key, filter_by) {
 				case 'include':
 					if (key === 'teams') {
 						if (value.team) {
-							console.log(value.id);
 							filtered.push(value);
 						}
 					} else if (key === 'individuals') {
@@ -124,7 +123,7 @@ function filter(data, key, filter_by) {
 					}
 					break;
 				case 'judge':
-					if (value.judge === key.toUpperCase()) {
+					if ((value.judge).toString() === key) {
 						filtered.push(value);
 					}
 					break;
