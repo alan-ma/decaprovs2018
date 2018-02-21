@@ -105,7 +105,7 @@ function filter(data, key, filter_by) {
 					}
 					break;
 				case 'id':
-					if (value.id === key) {
+					if ((value.id).toString() === key) {
 						filtered.push(value);
 					}
 					break;
